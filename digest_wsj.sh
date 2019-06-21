@@ -54,5 +54,3 @@ echo
 echo ${WSJ_URL}
 echo
 echo ${ANSWER_URL}
-
-echo ${CONTENTS} > ~/tmp/contents.html
