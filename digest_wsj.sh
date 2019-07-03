@@ -8,6 +8,7 @@ login_url=$(curl -s -I "https://accounts.wsj.com/login")
 connection=$(echo "$login_url" | grep -oP "location:\s+.*connection=\K(\w+)")
 client_id=$(echo "$login_url" | grep -oP "location:\s+.*client_id=\K(\w+)")
 
+OUTPUT_DIR=${HOME}/Nextcloud/Documents/English/Torael/follow-up
 
 rm -f cookies.txt
 
@@ -44,6 +45,9 @@ TITLE=$(echo ${CONTENTS} | xmllint --html --xpath "//h1/text()" - 2>/dev/null)
 DESCRIPTION=$(echo ${CONTENTS} | xmllint --html --xpath "(//h2)[1]/text()" - 2>/dev/null)
 
 FILENAME="$(date --iso-8601) ${TITLE} (${ANSWER_ID})"
+
+cd ${OUTPUT_DIR}
+wget -q --no-use-server-timestamps ${ANSWER_URL}
 
 echo ${FILENAME}
 echo
