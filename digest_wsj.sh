@@ -49,8 +49,8 @@ FILENAME="$(date --iso-8601) ${TITLE} (${ANSWER_ID})"
 cd ${OUTPUT_DIR}
 wget -q --no-use-server-timestamps ${ANSWER_URL}
 
-open ${WSJ_URL}
-open ${ANSWER_URL}
+xdg-open ${WSJ_URL}
+xdg-open ${ANSWER_URL}
 
 echo ${FILENAME}
 echo
