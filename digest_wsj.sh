@@ -54,6 +54,8 @@ xdg-open ${ANSWER_URL}
 
 echo ${FILENAME}
 echo
+echo $(date --iso-8601)
+echo
 echo ${TITLE}
 echo
 echo ${DESCRIPTION}
