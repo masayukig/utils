@@ -61,5 +61,4 @@ echo
 echo ${DESCRIPTION}
 echo
 echo ${WSJ_URL}
-echo
 echo ${ANSWER_URL}
